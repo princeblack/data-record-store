@@ -1,0 +1,74 @@
+{
+  "records": [
+    {
+      "title": "Jesus is King",
+      "artist": "Kanye West",
+      "price": 8.99,
+      "year": 2019,
+      "id": "1573653404458"
+    },
+    {
+      "title": "Jesus is King",
+      "artist": "Kanye West",
+      "price": 8.99,
+      "year": 2019,
+      "id": "1573653598125"
+    },
+    {
+      "title": "Jesus is King",
+      "artist": "Kanye West",
+      "price": 8.99,
+      "year": 2019,
+      "id": "1573653602025"
+    },
+    {
+      "title": "Jesus is King",
+      "artist": "Kanye West",
+      "price": 8.99,
+      "year": 2019,
+      "id": "1573653625889"
+    },
+    {
+      "title": "Jesus is King",
+      "artist": "Kanye West",
+      "price": 8.99,
+      "year": 2019,
+      "id": "1573653626931"
+    },
+    {
+      "title": "Jesus is King",
+      "artist": "Kanye West",
+      "price": 8.99,
+      "year": 2019,
+      "id": "1573653659443"
+    },
+    {
+      "title": "Jesus is King",
+      "artist": "Kanye West",
+      "price": 8.99,
+      "year": 2019,
+      "id": "1573653659930"
+    }
+  ],
+  "users": [
+    {
+      "firstName": "Mahamadi",
+      "lastName": "Congo",
+      "userName": "Prince-Black",
+      "birthday": "26-09-1991",
+      "email": "madestou@yahoo.fr",
+      "password": "papapapa",
+      "id": "1573652741840"
+    },
+    {
+      "firstName": "Mahamadi",
+      "lastName": "Congo",
+      "userName": "Prince-Black",
+      "birthday": "26-09-1991",
+      "email": "madestou@yahoo.fr",
+      "password": "papapapa",
+      "id": "1573652852604"
+    }
+  ],
+  "orders": []
+}
