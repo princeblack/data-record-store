@@ -20,7 +20,7 @@ const UserSchema = new Schema({
         require: true
     },
     birthday:{
-        type: date
+        type: Date
     },
     userName:{
         type: String,
@@ -29,4 +29,4 @@ const UserSchema = new Schema({
     }
   });
 
-  module.exports = mongoose.model('User',UserSchema)
+  module.exports = mongoose.model('User',UserSchema);
