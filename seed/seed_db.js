@@ -20,6 +20,13 @@ const User = require('../models/User');
     });
 
     console.log(`First, i will delete all the old users`);
+    
+    try {
+        await User.deleteMany({});
+        console.log('Old users moved to a better place. Spandau');
+      } catch (e) {
+        console.log(e);
+      }
 
     const userPromises = new Array(20)
         .fill('Babylon')
