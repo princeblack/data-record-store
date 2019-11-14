@@ -20,13 +20,15 @@ const User = require('../models/User');
     });
 
     console.log(`First, i will delete all the old users`);
-    
+
     try {
         await User.deleteMany({});
         console.log('Old users moved to a better place. Spandau');
       } catch (e) {
         console.log(e);
-      }
+      };
+
+  console.log(`I am creating 20 fake users`);
 
     const userPromises = new Array(20)
         .fill('Babylon')
@@ -40,12 +42,12 @@ const User = require('../models/User');
                 userName: faker.internet.userName(),
             })
             return user.save();
-        })
+        });
     try {
         await Promise.all(userPromises).then(data =>
             console.log("Users stored in the database")
         )
     } catch (error) {
         console.log(error);
-    }
+    };
 })();
