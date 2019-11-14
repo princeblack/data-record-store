@@ -5,7 +5,6 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
-const mongoose = require('mongoose');
 
 /** ROUTERS */
 const indexRouter = require('./routes/index');
@@ -21,22 +20,6 @@ const app = express();
 
 /** LOGS */
 app.use(logger('dev'));
-
-/** CONNECT TO MONGO */
-mongoose.connect('mongodb://localhost:27017/live-coding-ds', {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useUnifiedTopology: true
-});
-
-mongoose.connection.on(
-  'error',
-  console.error.bind(console, 'connection error:')
-);
-
-mongoose.connection.on('open', () => {
-  console.log(`Connected to the database...`);
-});
 
 /** SET UP LOWDB */
 const adapter = new FileSync('data/db.json');
