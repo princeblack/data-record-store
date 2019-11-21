@@ -20,7 +20,7 @@ const UserSchema = new Schema({
         require: true
     },
     birthday:{
-        type: Date
+        type: String
     },
     userName:{
         type: String,

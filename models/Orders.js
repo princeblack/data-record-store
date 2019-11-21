@@ -3,20 +3,17 @@ const {Schema} = mongoose;
 
 const OrdersSchema = new Schema({
     date:{
-        type: Date,
+        type: String,
         require : true,
     },
     quantity:{
         type : Number,
         require: true
     },
-    records:{
-        record_id:{
-            type: Number,
-            unique: true,
-            require:true
-        }
-    }
+    records:[{
+        type: String,
+        require: true
+    }]
 });
 
 
