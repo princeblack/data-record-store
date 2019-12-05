@@ -25,7 +25,8 @@ app.use(logger('dev'));
 mongoose.connect('mongodb://localhost:27017/live-coding-ds', {
   useNewUrlParser: true,
   useCreateIndex: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useFindAndModify: false
 });
 
 mongoose.connection.on(

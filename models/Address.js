@@ -3,12 +3,14 @@ const {Schema} = mongoose;
 const AddressSchema = new Schema({
     street:{
         type: String,
-        require: true
+        required: true
     },
     city:{
         type: String,
-        require: true
+        required: true
     }
-})
+},
+{ _id: false }
+)
 
 module.exports = AddressSchema;

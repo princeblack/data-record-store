@@ -32,7 +32,7 @@ const OrdersSchema = new Schema({
   }
 });
 
-OrderSchema.virtual('totalPrice').get(function() {
+OrdersSchema.virtual('totalPrice').get(function() {
     let records = this.records;
   
     totalPriceReducer = (acc, curr) => {

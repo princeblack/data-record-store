@@ -7,16 +7,17 @@ const {
   deleteRecord,
   updateRecord
 } = require('../controllers/recordsController');
+const auth = require('../middleware/authenticator');
 
 router
   .route('/')
   .get(getRecords)
-  .post(addRecord);
+  .post(auth,addRecord);
 
 router
   .route('/:id')
   .get(getRecord)
-  .delete(deleteRecord)
-  .put(updateRecord);
+  .delete(auth,deleteRecord)
+  .put(auth,updateRecord);
 
 module.exports = router;
