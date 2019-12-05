@@ -11,8 +11,8 @@ const OrdersSchema = new Schema({
         require: true
     },
     records:[{
-        type: String,
-        require: true
+        type: Schema.Types.ObjectId,
+        ref: 'Records'
     }]
 });
 

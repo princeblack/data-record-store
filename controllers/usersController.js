@@ -5,6 +5,9 @@ const createError = require('http-errors');
 exports.getUsers = async (req, res, next) => {
   try {
     const users = await User.find()
+    .select('-password -__v')
+    .sort('-lastName')
+    .limit(5)
     res.status(200).send(users);
   } catch (e) {
     next(e);
@@ -46,7 +49,8 @@ exports.deleteUser =  async (req, res, next) => {
 exports.updateUser = async (req, res, next) => {
   try {
     const user =  await User.findByIdAndUpdate(req.params.id,req.body, {
-      new: true
+      new: true,
+      runValidators: true
     });
     if (!user) throw new createError.NotFound();
     res.status(200).send(user);
