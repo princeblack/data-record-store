@@ -1,21 +1,46 @@
 const mongoose = require('mongoose');
-const {Schema} = mongoose;
+const { Schema } = mongoose;
 
 const OrdersSchema = new Schema({
-    date:{
+    date: {
         type: String,
-        require : true,
+        require: true,
     },
-    quantity:{
-        type : Number,
+    quantity: {
+        type: Number,
         require: true
     },
-    records:[{
-        type: Schema.Types.ObjectId,
-        ref: 'Records'
-    }]
+    records: [
+        {
+            quantity: {
+                type: Number,
+                required: true
+            },
+            record: {
+                type: Schema.Types.ObjectId,
+                ref: 'Record'
+            }
+        }
+    ]
+},
+{
+  toJSON: {
+    virtuals: true
+  },
+  toObject: {
+    virtuals: true
+  }
 });
 
+OrderSchema.virtual('totalPrice').get(function() {
+    let records = this.records;
+  
+    totalPriceReducer = (acc, curr) => {
+      return acc + curr.quantity * curr.record.price;
+    };
+  
+    return records.reduce(totalPriceReducer, 0);
+  });
 
-module.exports = mongoose.model('Orders',OrdersSchema)
+module.exports = mongoose.model('Orders', OrdersSchema)
 
