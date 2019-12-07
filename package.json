@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEBUG=data-record-store:* nodemon --inspect ./bin/www --ignore 'data/*'",
+    "start": "DEBUG=data-record-store:* nodemon --inspect ./bin/www'",
     "seed": "node seed/seed_db.js"
   },
   "dependencies": {

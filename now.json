@@ -1,0 +1,4 @@
+{
+    "name": "data-record-store",
+    "builds": [{"src": "app.js", "use": "@now/node"}]
+}

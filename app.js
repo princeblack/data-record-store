@@ -14,6 +14,7 @@ const ordersRouter = require('./routes/orders');
 
 /** OUR MIDDLEWARE */
 const { setCors } = require('./middleware/security');
+const env = require('./config/config')
 
 /** INIT THE SERVER */
 const app = express();
